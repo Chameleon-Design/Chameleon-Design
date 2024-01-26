@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import Page_1 from './routes/1/1.component';
 import page_2 from './routes/2/2.component';
 import page_3 from './routes/3/3.component';
@@ -16,7 +16,7 @@ import page_8 from './routes/8/8.component';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
     <Routes>
       <Route element = { <App /> }  index />
       <Route element = { <Page_1 /> }  path="/1" />
@@ -28,7 +28,7 @@ root.render(
       <Route element = { <page_7 /> }  path="/7" />
       <Route element = { <page_8 /> }  path="/8" />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
 
